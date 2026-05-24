@@ -65,3 +65,5 @@ const register = async (req, res) => {
     res.json({ message: "something went wrong" });
   }
 };
+
+export { login, register };
