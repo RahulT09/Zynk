@@ -5,10 +5,13 @@ import { createServer } from "node:http";
 import { Server } from "socket.io";
 
 import cors from "cors";
-import userRoutes from "./src/routes/users_routes.js";
+import userRoutes from "./routes/users_routes.js";
 
 import { profile } from "node:console";
-import { connectToSocket } from "./src/controllers/socketManager.js";
+import { connectToSocket } from "./controllers/socketManager.js";
+
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
 const server = createServer(app);
@@ -24,7 +27,7 @@ app.use("/api/v1/users", userRoutes);
 const start = async () => {
   app.set("mongo_user");
   const connectionDB = await mongoose.connect(
-    "mongodb+srv://rt206292_db_user:phdENuIJR3vcVzkr@cluster0.8bfl4y8.mongodb.net/",
+    process.env.MONGODB_URI,
   );
   console.log(`DB connected to DB HOST : ${connectionDB.connection.host}`);
 
