@@ -1,0 +1,95 @@
+.page {
+  min-height: 100vh;
+  background: #0f172a;
+  color: white;
+}
+
+/* Navbar */
+.Navbar {
+  height: 80px;
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+}
+
+.navHeader h2 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* Main Section */
+.meetCode {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 8%;
+  gap: 60px;
+}
+
+/* Left Side */
+.codeinput {
+  flex: 1;
+  max-width: 500px;
+}
+
+.codeinput h2 {
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.codeinput input {
+  width: 100%;
+  padding: 18px 20px;
+  font-size: 18px;
+  border: 2px solid #334155;
+  border-radius: 12px;
+  background: #1e293b;
+  color: white;
+  outline: none;
+  transition: 0.3s;
+}
+
+.codeinput input::placeholder {
+  color: #94a3b8;
+}
+
+.codeinput input:focus {
+  border-color: #ff9839;
+  box-shadow: 0 0 20px rgba(255, 152, 57, 0.25);
+}
+
+.joinBtn {
+  margin-top: 20px;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 12px;
+  background: #ff9839;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.joinBtn:hover {
+  transform: translateY(-2px);
+  background: #ff8c1a;
+}
+
+/* Right Side */
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.imageContainer img {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+}
