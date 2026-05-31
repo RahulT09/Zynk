@@ -13,21 +13,25 @@ const login = async (req, res) => {
     if (!user) {
       return res
         .status(httpStatus.NOT_FOUND)
-        .json({ message: "User_Not_Found" });
+        .json({ message: "User Not Found" });
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
       return res.status(401).json({
-        message: "Invalid password",
+        message: "Invalid username or password",
       });
-    }
+    } 
     let token = crypto.randomBytes(20).toString("hex");
 
     user.token = token;
     await user.save();
-    return res.status(httpStatus.OK).json({ token: token });
-  } catch (e) {
+    return res.status(httpStatus.OK).json({ token: token })
+  }
+  
+  
+  
+  catch (e) {
     return res
       .status(httpStatus.INTERNAL_SERVER_ERROR)
       .json({ message: "Something went wrong" });

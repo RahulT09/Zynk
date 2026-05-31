@@ -24,23 +24,26 @@ export const connectToSocket = (server) => {
       timeonline[socket.id] = new Date();
 
       for (let a = 0; a < connections[path].length; a++) {
-        (io.to(connections[path][a]).emit("user-joined", socket.id),
-          connections[path]);
+        io.to(connections[path][a]).emit(
+          "user-joined",
+          socket.id,
+          connections[path],
+        );
       }
 
-      if (message[path] !== undefined) {
-        for (let a = 0; a < message[path].length; a++) {
+      if (messages[path] !== undefined) {
+        for (let a = 0; a < messages[path].length; a++) {
           io.to(socket.id).emit(
             "chat-message",
-            message[path][a][`data`],
-            message[path][a]["sender"],
-            message[path][a]["socket - id - sender"],
+            messages[path][a][`data`],
+            messages[path][a]["sender"],
+            messages[path][a]["socket-id-sender"],
           );
         }
       }
     });
 
-    socket.on("message", (toId, message) => {
+    socket.on("signal", (toId, message) => {
       io.to(toId).emit("signal", socket.id, message);
     });
 
@@ -55,10 +58,10 @@ export const connectToSocket = (server) => {
         ["", false],
       );
       if (found) {
-        if (message[matchingRoom] === undefined) {
-          message[matchingRoom] = [];
+        if (messages[matchingRoom] === undefined) {
+          messages[matchingRoom] = [];
         }
-        message[matchingRoom].push({
+        messages[matchingRoom].push({
           sender: sender,
           data: data,
           "socket-id-sender": socket.id,
@@ -84,7 +87,7 @@ export const connectToSocket = (server) => {
             for (let a = 0; a < connections[key].length; ++a) {
               io.to(connections[key][a]).emit("user-left", socket.id);
             }
-            var index = connection[key].indexOf(socket.id);
+            var index = connections[key].indexOf(socket.id);
             connections[key].splice(index, 1);
 
             if (connections[key].length === 0) {
