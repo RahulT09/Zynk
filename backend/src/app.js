@@ -11,7 +11,8 @@ import { profile } from "node:console";
 import { connectToSocket } from "./controllers/socketManager.js";
 
 import dotenv from "dotenv";
-dotenv.config();
+dotenv.config({ path: "../.env" });
+
 
 const app = express();
 const server = createServer(app);
