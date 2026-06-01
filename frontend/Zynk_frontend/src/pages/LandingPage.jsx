@@ -50,7 +50,7 @@ export default function LandingPage() {
           <br />
           <p>Cover a distance by Zynk Meet</p>
           <div role="Button" className="authBtn">
-            <a href="/auth">Get Started</a>
+            <a href="https://zynk-b0xz.onrender.com/auth">Get Started</a>
           </div>
         </div>
         <div>
