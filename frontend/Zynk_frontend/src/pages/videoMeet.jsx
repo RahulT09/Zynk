@@ -518,7 +518,7 @@ export default function VideoMeet() {
       stream.getTracks().forEach((track) => track.stop());
     }
 
-    navigate("/home");
+    navigate("/");
   };
 
   return (

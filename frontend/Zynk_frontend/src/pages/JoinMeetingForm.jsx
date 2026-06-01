@@ -27,7 +27,7 @@ function JoinMeetingForm() {
             <Button
               onClick={() => {
                 localStorage.removeItem("token");
-                navigate("/home");
+                navigate("/");
               }}
               variant="outlined"
             >

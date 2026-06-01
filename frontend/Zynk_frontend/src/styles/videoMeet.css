@@ -166,7 +166,7 @@
   border: 3px solid #334155;
 }
 
-/* Mobile */
+
 @media (max-width: 900px) {
   .lobbyPage {
     flex-direction: column;
@@ -364,5 +364,206 @@ padding: 0.7rem;
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+
+/* =========================
+   Large Tablets
+   ========================= */
+@media screen and (max-width: 1024px) {
+
+  .conferenceView video {
+    width: 350px;
+    height: 250px;
+  }
+
+  .chatRoom {
+    width: 35vw;
+  }
+
+  .localVideoContainer {
+    width: 180px !important;
+    height: 120px !important;
+  }
+
+  .lobbyLeft h1 {
+    font-size: 3rem;
+  }
+}
+
+
+/* =========================
+   Tablets
+   ========================= */
+@media screen and (max-width: 768px) {
+
+  .conferenceView {
+    gap: 15px;
+    padding: 10px;
+    padding-bottom: 130px;
+  }
+
+  .conferenceView video {
+    width: 100%;
+    max-width: 600px;
+    height: 250px;
+  }
+
+  .localVideoContainer {
+    width: 140px !important;
+    height: 100px !important;
+    left: 10px;
+    bottom: 90px;
+  }
+
+  .buttonContainers {
+    gap: 12px;
+    padding: 12px 20px;
+  }
+
+  .buttonContainers svg {
+    font-size: 1.6rem;
+  }
+
+  .chatRoom {
+    width: 45vw;
+    height: 75vh;
+    right: 10px;
+  }
+
+  .lobbyButtons {
+    flex-wrap: wrap;
+  }
+
+  .connectBtn {
+    width: 180px;
+  }
+}
+
+
+/* =========================
+   Mobile Phones
+   ========================= */
+@media screen and (max-width: 600px) {
+
+  .MeetContainer video {
+    width: 100%;
+  }
+
+  .conferenceView video {
+    width: 100%;
+    height: 220px;
+  }
+
+  .localVideoContainer {
+    width: 110px !important;
+    height: 80px !important;
+    left: 10px;
+    bottom: 85px;
+    border-width: 2px;
+  }
+
+  .buttonContainers {
+    width: 95%;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .buttonContainers svg {
+    font-size: 1.4rem;
+  }
+
+  .chatRoom {
+    width: calc(100% - 20px);
+    height: 65vh;
+    right: 10px;
+    left: 10px;
+    bottom: 85px;
+  }
+
+  .chatMessages {
+    height: calc(100% - 140px);
+  }
+
+  .lobbyLeft {
+    padding: 30px 15px;
+  }
+
+  .lobbyLeft h1 {
+    font-size: 2rem;
+  }
+
+  .lobbyLeft p {
+    font-size: 1rem;
+  }
+
+  .connectBtn {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+
+/* =========================
+   Small Phones
+   ========================= */
+@media screen and (max-width: 480px) {
+
+  .conferenceView {
+    padding: 5px;
+    padding-bottom: 120px;
+  }
+
+  .conferenceView > div {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .conferenceView video {
+    width: 100%;
+    height: 200px;
+  }
+
+  .localVideoContainer {
+    width: 90px !important;
+    height: 70px !important;
+  }
+
+  .buttonContainers {
+    gap: 8px;
+    padding: 8px 12px;
+  }
+
+  .buttonContainers svg {
+    font-size: 1.2rem;
+  }
+
+  .chatRoom {
+    height: 60vh;
+    border-radius: 12px;
+    padding-inline: 10px;
+  }
+
+  .chatInput {
+    padding: 8px;
+  }
+
+  .chatInput input {
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .chatInput button {
+    padding: 8px 12px;
+  }
+
+  .lobbyLeft h1 {
+    font-size: 1.7rem;
+  }
+
+  .lobbyLeft p {
+    font-size: 0.9rem;
   }
 }

@@ -2,47 +2,37 @@
   min-height: 100vh;
   background: #0f172a;
   color: white;
+  overflow-x: hidden;
 }
 
-/* Navbar */
 .Navbar {
-  height: 80px;
-  padding: 0 60px;
+  height: 60px;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: transparent;
 }
 
 .navHeader h2 {
-  margin: 0;
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 1.5rem;
 }
 
-/* Main Section */
 .meetCode {
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 60px);
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 0 8%;
+  justify-content: center;
   gap: 60px;
+  padding: 20px;
 }
 
-/* Left Side */
 .codeinput {
-  flex: 1;
-  max-width: 500px;
-}
-
-.codeinput h2 {
-  font-size: 2.8rem;
-  margin-bottom: 25px;
-  line-height: 1.2;
+  width: 100%;
+  max-width: 400px;
 }
 
 .codeinput input {
+  margin-top: 10px;
   width: 100%;
   padding: 18px 20px;
   font-size: 18px;
@@ -53,16 +43,13 @@
   outline: none;
   transition: 0.3s;
 }
-
 .codeinput input::placeholder {
   color: #94a3b8;
 }
-
 .codeinput input:focus {
   border-color: #ff9839;
   box-shadow: 0 0 20px rgba(255, 152, 57, 0.25);
 }
-
 .joinBtn {
   margin-top: 20px;
   padding: 15px 35px;
@@ -75,21 +62,54 @@
   cursor: pointer;
   transition: 0.3s;
 }
-
 .joinBtn:hover {
   transform: translateY(-2px);
   background: #ff8c1a;
 }
 
-/* Right Side */
-.imageContainer {
-  flex: 1;
-  display: flex;
-  justify-content: center;
+.image img {
+  width: 450px;
+  max-width: 100%;
+  height: auto;
 }
 
-.imageContainer img {
-  width: 100%;
-  max-width: 650px;
-  height: auto;
+@media screen and (max-width: 768px) {
+  .Navbar {
+    height: 50px;
+    padding: 0 12px;
+  }
+
+  .navHeader h2 {
+    font-size: 1.1rem;
+  }
+
+  .meetCode {
+    min-height: calc(100vh - 50px);
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .codeinput {
+    order: 1;
+    width: 100%;
+  }
+
+  .image {
+    order: 2;
+  }
+
+  .image img {
+    width: 220px;
+  }
+
+  .codeinput h2 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+  }
+
+  .joinBtn {
+    width: 100%;
+  }
 }
