@@ -239,14 +239,4 @@ git push origin feature/new-feature
 
 ---
 
-## License
 
-This project is licensed under the MIT License.
-
----
-
-## Author
-
-Developed by **Your Name**
-
-GitHub: https://github.com/your-github-username
