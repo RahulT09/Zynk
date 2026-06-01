@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 
 export default function LandingPage() {
   const router = useNavigate();
@@ -50,7 +50,9 @@ export default function LandingPage() {
           <br />
           <p>Cover a distance by Zynk Meet</p>
           <div role="Button" className="authBtn">
-            <a href="https://zynk-b0xz.onrender.com/auth">Get Started</a>
+            <Link to="/auth">
+              Get Started
+            </Link>
           </div>
         </div>
         <div>
