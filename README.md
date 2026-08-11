@@ -7,7 +7,7 @@ Zynk Meet is a full-stack real-time video conferencing application that enables 
 - User Authentication
 - Secure Login and Logout
 - Create and Join Meeting Rooms
-- Real-Time Video Communication
+- Real-Time Video Communication  
 - Real-Time Audio Communication
 - Integrated Meeting Chat
 - Unique Meeting Code Access
